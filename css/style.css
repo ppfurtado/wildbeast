@@ -17,6 +17,8 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
+  border-radius: 5px;
 }
 
 .estrutura {
@@ -52,7 +54,7 @@ img {
   font-size: 1.125em;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  transition: background 1s;
+  transition: background 0.4s;
 }
 .estrutura .header nav ul a:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -61,19 +63,65 @@ img {
   margin-left: 30px;
 }
 
+/* SIDENAV  */
 
 .estrutura .sidnave {
   grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
 }
+
+.sidnave li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0 rgba(44, 44, 44, 0.15);
+  transition: .1s ease-in-out;
+}
+
+.sidnave li a:hover {
+  background: #B07DFB;
+}
+
+
+/* CONTENT */
+
 
 .estrutura .content {
   grid-area: content;
 }
 
+
+
+/* ANUNCIOS */
+
+
 .estrutura .anuncios {
   grid-area: anuncios;
+  background: #fafbfc;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
 }
+
+/* FOOTER */
 
 .estrutura footer {
   grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
 }
+
+.estrutura footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+
+
+
