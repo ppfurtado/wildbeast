@@ -80,7 +80,7 @@ img {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px 0 rgba(44, 44, 44, 0.15);
-  transition: .1s ease-in-out;
+  transition: .15s ease-in-out;
 }
 
 .sidnave li a:hover {
@@ -93,8 +93,138 @@ img {
 
 .estrutura .content {
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  grid-template-areas:
+    "titulo  caracteristicas" 
+    "p       p"
+    "wolf1   p"
+    "wofl1   wolf2"
+    "p       p"
+    "Citacao citacao"
+    "ul informacao"
+    "wolf3 wolf3"
+  ;
 }
 
+
+.col-wide {
+  grid-column: 1 / -1;
+}
+
+.imagem-1 {
+  grid-row: span 2 ;
+  align-self: end;
+}
+
+.image-2 {
+  align-self: end;
+}
+
+
+/* ESTILOS CONTENT  */
+
+p {
+  font-size: 1.125em;
+  letter-spacing: 0.005em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.informacao p + p {
+  margin-top: 30px;
+}
+
+/* TÍTULO*/
+
+.titulo {
+  color: #8844ee;
+}
+
+.titulo h1 {
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.titulo span {
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+/* CARACTERISTICAS */
+
+.caracteristicas {
+  display: flex;
+  align-items: flex-start;
+}
+
+.caracteristicas > div {
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  box-shadow: 5px 5px 5px 0 rgba(44, 44, 44, 0.15);
+  position: relative;
+}
+.caracteristicas > div:first-child {
+  margin-right: 30px;
+}
+.caracteristicas span {
+ display: block;
+ color: #B07DFB;
+}
+
+.numero {
+  font-size: 3em;
+  line-height: 1;
+  margin-right: 10px auto;
+}
+
+.rotulo {
+  background: white;
+  border-radius: 0 0 5px 5px;
+  padding: 5px 0;
+  position: relative;
+  top: 2px;
+}
+
+.destaque {
+  font-size: 0.875em;
+  color: #B07DFB;
+  max-width: 16em;
+}
+
+.cintacao, .atributos {
+  align-self: start;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.29);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.cintacao p {
+  font-size: 1.5em;
+  font-style: italic;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+.atributos li {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: 1.2em;
+  margin: 15px ;
+}
+
+.atributos li + li {
+  border-top: 2px solid #B07DFB;
+}
 
 
 /* ANUNCIOS */
@@ -121,7 +251,3 @@ img {
   text-align: center;
   padding: 30px;
 }
-
-
-
-
